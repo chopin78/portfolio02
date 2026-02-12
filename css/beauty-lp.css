@@ -823,7 +823,7 @@ a{
 
   ul.anchor li:first-child{
     grid-column: 1 / -1;
-    margin-bottom: -16px;
+    margin-bottom: -28px;
   }
 
   ul.anchor a{
@@ -835,15 +835,15 @@ a{
     width: 100%;
     max-width: none;
     aspect-ratio: auto;
-    height: 240px;
+    height: 188px;
     object-fit: contain;
     margin: 0;
   }
 
   ul.anchor li:nth-child(n + 2) img{
     height: 240px;
-    width: 100%;
-    margin-left: 0;
+    width: 150%;
+    margin-left: -25%;
   }
 
   #main{
