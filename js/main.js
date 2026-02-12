@@ -23,3 +23,22 @@ function toggleNav() {
 }
 
 toggleNav();
+
+// Show floating top button on scroll (beauty-lp only)
+document.addEventListener("DOMContentLoaded", function () {
+  var floatingTop = document.querySelector(".floating-top");
+  if (!floatingTop) {
+    return;
+  }
+
+  function updateFloatingTop() {
+    if (window.scrollY > 200) {
+      floatingTop.classList.add("is-visible");
+    } else {
+      floatingTop.classList.remove("is-visible");
+    }
+  }
+
+  updateFloatingTop();
+  window.addEventListener("scroll", updateFloatingTop);
+});
