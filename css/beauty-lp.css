@@ -9,7 +9,7 @@
   --banner-h: 32px;
 }
 
-*{
+*, *::before, *::after{
   box-sizing: border-box;
 }
 
@@ -63,44 +63,9 @@ body{
   display: none;
 }
 
-.sr-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 /* TOP (current HTML) */
 #main_area{
   background: linear-gradient(180deg, #ffffff 0%, #e9f6ff 100%);
-}
-
-#bread{
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 14px 0 10px;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-#bread ol{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-#bread li + li::before{
-  content: "＞";
-  color: #b0a8a2;
-  margin-right: 6px;
 }
 
 .contentL{
@@ -112,10 +77,6 @@ body{
   margin: 0;
   width: 100vw;
   margin-left: calc(50% - 50vw);
-}
-
-#main:hover{
-  opacity: 1;
 }
 
 #main img{
@@ -139,8 +100,6 @@ body{
 .items .inner .info > .no7 .h1{
   text-align: center;
   color: #ff7b88;
-  /* font-size: 34px;
-  letter-spacing: 0.04rem; */
   margin: 0 0 40px;
 }
 
@@ -258,23 +217,6 @@ body{
   margin: 0 0 10px;
 }
 
-.items .inner .info > .no7 .product_block .btn{
-  margin-top: 6px;
-}
-
-.items .inner .info > .no7 .product_block .btn span{
-  display: inline-block;
-  background: #111;
-  color: #fff;
-  padding: 12px 18px;
-  font-size: 14px;
-  letter-spacing: 0.04rem;
-}
-
-.items .inner .info > .no7 .product_block .btn span::after{
-  content: "  ›";
-  margin-left: 8px;
-}
 
 .text_note{
   width: min(980px, 92%);
@@ -285,14 +227,9 @@ body{
 }
 
 /* How to (no7) */
-.items .inner .info > .no9 {
-    background: url(../images/beauty/bg9_pc.png) center top / cover no-repeat #fbe5ef;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 120px 0 90px;
-}
-
+.items .inner .info > .no8 .h1,
 .items .inner .info > .no9 .h1{
+  display: block;
   text-align: center;
   color: #ff7b88;
   font-size: 34px;
@@ -300,6 +237,7 @@ body{
   margin: 0 0 12px;
 }
 
+.items .inner .info > .no8 .catch,
 .items .inner .info > .no9 .catch{
   text-align: center;
   color: #3a3a3a;
@@ -308,21 +246,16 @@ body{
   margin: 0 0 22px;
 }
 
-.items .inner .info > .no9 .ttl.blur{
-  text-align: center;
-  color: #ff7b88;
-  font-size: 16px;
-  margin: 0 0 18px;
-}
-
+.items .inner .info > .no8 .features_inner,
 .items .inner .info > .no9 .features_inner{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
   width: min(860px, 92%);
-  margin: 0 auto 16px;
+  margin: 0 auto 18px;
 }
 
+.items .inner .info > .no8 .features_inner .set,
 .items .inner .info > .no9 .features_inner .set{
   background: #fff;
   border: 1px solid #e6eef6;
@@ -331,6 +264,7 @@ body{
   text-align: center;
 }
 
+.items .inner .info > .no8 .features_inner .set .img img,
 .items .inner .info > .no9 .features_inner .set .img img{
   width: 100%;
   height: 130px;
@@ -338,11 +272,77 @@ body{
   margin-bottom: 10px;
 }
 
+.items .inner .info > .no8 .features_inner .set p,
 .items .inner .info > .no9 .features_inner .set p{
   font-size: 12px;
   color: #3a3a3a;
   line-height: 1.7;
   margin: 0;
+}
+
+.items .inner .info > .no8 .howto,
+.items .inner .info > .no9 .howto{
+  width: min(860px, 92%);
+  margin: 40px auto;
+  background: #fff;
+  border: 1px solid #e6eef6;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
+  padding: 24px 20px 28px;
+}
+
+.items .inner .info > .no8 .howto_ttl,
+.items .inner .info > .no9 .howto_ttl{
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.items .inner .info > .no8 .howto_ttl img,
+.items .inner .info > .no9 .howto_ttl img{
+  width: 160px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.items .inner .info > .no8 .howto_inner .howto_block,
+.items .inner .info > .no9 .howto_inner .howto_block{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.items .inner .info > .no8 .howto_inner .set,
+.items .inner .info > .no9 .howto_inner .set{
+  text-align: center;
+}
+
+.items .inner .info > .no8 .howto_inner .set .img img,
+.items .inner .info > .no9 .howto_inner .set .img img{
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.items .inner .info > .no8 .howto_inner .set .txt p,
+.items .inner .info > .no9 .howto_inner .set .txt p{
+  font-size: 12px;
+  color: #333;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.items .inner .info > .no9 {
+    background: url(../images/beauty/bg9_pc.png) center top / cover no-repeat #fbe5ef;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding: 120px 0 90px;
+}
+
+.items .inner .info > .no9 .ttl.blur{
+  text-align: center;
+  color: #ff7b88;
+  font-size: 16px;
+  margin: 0 0 18px;
 }
 
 .items .inner .info > .no9 .note{
@@ -356,50 +356,6 @@ body{
   text-align: center;
 }
 
-.items .inner .info > .no9 .howto{
-  width: min(860px, 92%);
-  margin: 40px auto;
-  background: #fff;
-  border: 1px solid #e6eef6;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
-  padding: 24px 20px 28px;
-}
-
-.items .inner .info > .no9 .howto_ttl{
-  text-align: center;
-  margin: 0 0 16px;
-}
-
-.items .inner .info > .no9 .howto_ttl img{
-  width: 160px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.items .inner .info > .no9 .howto_inner .howto_block{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.items .inner .info > .no9 .howto_inner .set{
-  text-align: center;
-}
-
-.items .inner .info > .no9 .howto_inner .set .img img{
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  background: #fff;
-}
-
-.items .inner .info > .no9 .howto_inner .set .txt p{
-  font-size: 12px;
-  color: #333;
-  margin-top: 8px;
-  line-height: 1.6;
-}
-
 @media (max-width: 900px){
   .banner-link {
     color: #fff;
@@ -410,12 +366,15 @@ body{
     background-size: 140% auto;
     padding: 90px 0 70px;
   }
+  .items .inner .info > .no8 .h1,
   .items .inner .info > .no9 .h1{
     font-size: 26px;
   }
+  .items .inner .info > .no8 .features_inner,
   .items .inner .info > .no9 .features_inner{
     grid-template-columns: 1fr;
   }
+  .items .inner .info > .no8 .howto_inner .howto_block,
   .items .inner .info > .no9 .howto_inner .howto_block{
     grid-template-columns: 1fr;
   }
@@ -428,107 +387,10 @@ body{
     padding: 120px 0 90px;
 }
 
-.items .inner .info > .no8 .h1{
-  display: block;
-  text-align: center;
-  color: #ff7b88;
-  font-size: 34px;
-  letter-spacing: 0.04rem;
-  margin: 0 0 12px;
-}
-
-.items .inner .info > .no8 .catch{
-  text-align: center;
-  color: #3a3a3a;
-  font-size: 15px;
-  line-height: 1.9;
-  margin: 0 0 22px;
-}
-
-.items .inner .info > .no8 .features_inner{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  width: min(860px, 92%);
-  margin: 0 auto 18px;
-}
-
-.items .inner .info > .no8 .features_inner .set{
-  background: #fff;
-  border: 1px solid #e6eef6;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
-  padding: 18px 16px 14px;
-  text-align: center;
-}
-
-.items .inner .info > .no8 .features_inner .set .img img{
-  width: 100%;
-  height: 130px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
 .items .inner .info > .no8 .features_inner .set .ttl{
   color: #ff7b88;
   font-size: 14px;
   margin: 0 0 8px;
-}
-
-.items .inner .info > .no8 .features_inner .set p{
-  font-size: 12px;
-  color: #3a3a3a;
-  line-height: 1.7;
-  margin: 0;
-}
-
-.items .inner .info > .no8 .howto{
-  width: min(860px, 92%);
-  margin: 26px auto 0;
-  background: #fff;
-  border: 1px solid #e6eef6;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
-  padding: 24px 20px 28px;
-}
-
-.items .inner .info > .no8 .howto_ttl{
-  text-align: center;
-  margin: 0 0 16px;
-}
-
-.items .inner .info > .no8 .howto_ttl img{
-  width: 160px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.items .inner .info > .no8 .howto_inner .howto_block{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.items .inner .info > .no8 .howto_inner .set{
-  text-align: center;
-}
-
-.items .inner .info > .no8 .howto_inner .set .img img{
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  background: #fff;
-}
-
-.items .inner .info > .no8 .howto_inner .set .txt p{
-  font-size: 12px;
-  color: #333;
-  margin-top: 8px;
-  line-height: 1.6;
-}
-
-.items .inner .info > .no8 .link1{
-  display: block;
-  text-align: center;
-  margin-top: 26px;
 }
 
 .btn_products {
@@ -547,23 +409,13 @@ body{
   cursor: pointer;
 }
 
-.items .inner .info > .no8 .link1 .btn span::after{
-  content: " ＞";
-}
-
 @media (max-width: 900px){
   .items .inner .info > .no8{
     background-size: 140% auto;
     padding: 90px 0 70px;
   }
-  .items .inner .info > .no8 .h1{
-    font-size: 26px;
-  }
-  .items .inner .info > .no8 .features_inner{
-    grid-template-columns: 1fr;
-  }
-  .items .inner .info > .no8 .howto_inner .howto_block{
-    grid-template-columns: 1fr;
+  .items .inner .info > .no8 .howto{
+    margin: 26px auto 0;
   }
 }
 
@@ -741,45 +593,10 @@ a{
   z-index: 10;
 }
 
-.header-inner{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-  gap: 20px;
-}
-
-.brand{
-  font-size: 28px;
-  letter-spacing: 0.15rem;
-  flex: 0 0 auto;
-}
-
-.nav{
-  display: flex;
-  gap: 22px;
-  font-size: 14px;
-  justify-content: center;
-  flex: 1 1 auto;
-}
-
-
 /* SP Top adjustments (momo puri style) */
 @media (max-width: 768px){
   :root{
     --banner-h: 56px;
-  }
-
-  #bread{
-    width: 100%;
-    padding: 12px 16px;
-    background: #fff;
-    border-top: 1px solid #e6e6e6;
-    border-bottom: 1px solid #e6e6e6;
-  }
-
-  #bread ol{
-    gap: 6px;
   }
 
   .sp{
@@ -849,47 +666,6 @@ a{
   #main{
     display: block !important;
   }
-}
-
-/* To top area */
-.to-top-area{
-  background: #fff;
-  padding: 40px 0;
-}
-
-.to-top-inner{
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 10px;
-}
-
-.to-top-line{
-  width: 1px;
-  height: 64px;
-  background: #e3e3e3;
-  justify-self: center;
-}
-
-.to-top-link{
-  text-align: center;
-  color: #666;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 0.06rem;
-}
-
-.to-top-logo{
-  display: block;
-  font-size: 18px;
-  letter-spacing: 0.1rem;
-  color: #999;
-  margin-bottom: 4px;
-}
-
-.to-top-text{
-  display: block;
-  color: #555;
 }
 
 .floating-top{
